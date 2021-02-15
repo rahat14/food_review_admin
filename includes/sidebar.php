@@ -112,6 +112,7 @@ if (!isset($_SESSION['admin_email'])) {
                             </li>
 
 
+
                             <li class="nav-item has-treeview">
                                 <a href="#" class="nav-link">
                                     <i class="nav-icon nav-icon fas fa-copy"></i>
@@ -483,6 +484,7 @@ if (!isset($_SESSION['admin_email'])) {
                                             <p>Projects</p>
                                         </a>
                                     </li>
+                                    updated somethin to cehcel 
                                     <li class="nav-item">
                                         <a href="pages/examples/project-add.html" class="nav-link">
                                             <i class="far fa-circle nav-icon"></i>
