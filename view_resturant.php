@@ -25,7 +25,7 @@ if (!isset($_SESSION['admin_email'])) {
 
                 <li class="active">
 
-                    <i class="fa fa-dashboard"></i> Dashboard / All Job Prepration
+                    <i class="fa fa-dashboard"></i> Dashboard / All Resturants
 
                 </li>
 
@@ -50,7 +50,7 @@ if (!isset($_SESSION['admin_email'])) {
                     <h3 class="panel-title">
                         <!-- panel-title Starts -->
 
-                        <i class="fas fa-money fa-fw"></i>All Job Prepration
+                        <i class="fas fa-money fa-fw"></i>All Resturants
 
                     </h3><!-- panel-title Ends -->
 
@@ -71,13 +71,13 @@ if (!isset($_SESSION['admin_email'])) {
                                 <tr>
 
                                     <th>ID</th>
-                                    <th>Title</th>
+                                    <th>Name</th>
                                     <th>Image</th>
-                                    <th>Pdf</th>
+                                    <th>Address</th>
                                     <!-- <th>Description</th> -->
                                     <th>Category</th>
-                                    <th>Sub-Category</th>
-                                    <th>Date</th>
+                                    <th>Location</th>
+                            
                                     <th>Details</th>
                                     <th>Delete</th>
 
@@ -92,7 +92,7 @@ if (!isset($_SESSION['admin_email'])) {
 
                                 $i = 0;
 
-                                $get_pro = "select * from job_prep_db ORDER BY id DESC";
+                                $get_pro = "select * from resturant_db ORDER BY id DESC";
 
                                 $run_pro = mysqli_query($con, $get_pro);
 
@@ -100,33 +100,30 @@ if (!isset($_SESSION['admin_email'])) {
 
                                     $pro_id = $row_pro['id'];
 
-                                    $pro_title = $row_pro['title'];
+                                    $pro_title = $row_pro['name'];
 
                                     $pro_image = $row_pro['image'];
-                                    $pro_image2 = $row_pro['image2'];
-                                    $pro_image3 = $row_pro['image3'];
-
-                                    $pro_pdf = $row_pro['pdf'];
 
                                     //  $pro_desc = $row_pro['description'];
-
-                                    $pro_cat_id = $row_pro['cat_id'];
-                                    $pro_sub_cat_id = $row_pro['sub_cat_id'];
+                                    $address = $row_pro['address'];
+                                    $pro_cat_id = $row_pro['food_type'];
+                                    $pro_sub_cat_id = $row_pro['location_id'];
 
                                     // get cat name 
                                     //  query 
-                                    $cat_query = "SELECT name  as namee  FROM job_prep_category where id = $pro_cat_id ";
+                                    $cat_query = "SELECT name  as namee  FROM food_type where id = $pro_cat_id ";
                                     $run_query = mysqli_query($con, $cat_query);
                                     $datas  = mysqli_fetch_assoc($run_query);
                                     $pro_cat_name =  $datas['namee'];
+                                   
                                     // get sub cat name 
-                                    $sub_query = "SELECT name  as nameee  FROM job_prep_sub_category where id = $pro_sub_cat_id ";
+                                    $sub_query = "SELECT name  as nameee  FROM location_db where id = $pro_sub_cat_id ";
                                     $run_sub_query = mysqli_query($con, $sub_query);
                                     $datass  = mysqli_fetch_assoc($run_sub_query);
-                                    $pro_sub_cat_name =  $datass['nameee'];
+                                    $pro_location_name =  $datass['nameee'];
 
 
-                                    $pro_date = $row_pro['date'];
+                                    //$pro_date = $row_pro['name'];
 
                                     $i++;
 
@@ -140,32 +137,30 @@ if (!isset($_SESSION['admin_email'])) {
 
                                         <td>
                                             <img src="all_images/<?php echo $pro_image; ?>" width="50" height="50">&nbsp
-                                            <img src="all_images/<?php echo $pro_image2; ?>" width="50" height="50">&nbsp
-                                            <img src="all_images/<?php echo $pro_image3; ?>" width="50" height="50">
                                         </td>
-                                        <td>‎ <a href="all_pdf/"><?php echo $pro_pdf; ?></td></a>
+                                        <td>‎ <?php echo $address; ?></td>
 
 
 
                                         <td><?php echo $pro_cat_name; ?></td>
 
-                                        <td><?php if (strlen($pro_sub_cat_name) == 0) {
-                                                echo "N/A";
-                                            } else {
-                                                echo $pro_sub_cat_name;
-                                            }
+                                        <td><?php //if (strlen($pro_sub_cat_name) == 0) {
+                                             //   echo "N/A";
+                                         //   } else {
+                                                echo $pro_location_name;
+                                           // }
 
                                             ?></td>
 
 
 
-                                        <td><?php echo $pro_date; ?></td>
+                                    
 
 
                                         <td>
 
 
-                                            <button class="btn btn-block btn-outline-primary" data-toggle="modal" onclick="window.location.href='index.php?edit_job_prepration=<?php echo $pro_id; ?>'">
+                                            <button class="btn btn-block btn-outline-primary" data-toggle="modal" onclick="window.location.href='index.php?edit_resturant=<?php echo $pro_id; ?>'">
 
                                                 Details
 
@@ -175,7 +170,7 @@ if (!isset($_SESSION['admin_email'])) {
 
 
                                         <td>
-                                            <button class="btn btn-block btn-outline-danger" data-toggle="modal" onclick="window.location.href='index.php?delete_job_prepration=<?php echo $pro_id; ?>'">
+                                            <button class="btn btn-block btn-outline-danger" data-toggle="modal" onclick="window.location.href='index.php?delete_resturant=<?php echo $pro_id; ?>'">
 
                                                 Delete
 

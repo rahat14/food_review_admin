@@ -124,13 +124,13 @@ if (!isset($_SESSION['admin_email'])) {
                                 </a>
                                 <ul class="nav nav-treeview">
                                     <li class="nav-item">
-                                        <a href="index.php?insert_job_prepration" class="nav-link">
+                                        <a href="index.php?insert_resturant" class="nav-link">
                                             <i class="far fa-circle nav-icon"></i>
                                             <p>Add a Resturants</p>
                                         </a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="index.php?view_job_prepration" class="nav-link">
+                                        <a href="index.php?view_resturant" class="nav-link">
                                             <i class="far fa-circle nav-icon"></i>
                                             <p>View Resturants</p>
                                         </a>

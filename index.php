@@ -133,9 +133,9 @@ if (!isset($_SESSION['admin_email'])) {
 
                         include("insert_p_cat.php");
                     }
-                    if (isset($_GET['insert_job_prepration'])) {
+                    if (isset($_GET['insert_resturant'])) {
 
-                        include("insert_job_prepration.php");
+                        include("insert_resturant.php");
                     }
 
                     if (isset($_GET['view_p_cats'])) {
@@ -207,8 +207,8 @@ if (!isset($_SESSION['admin_email'])) {
                         include("insert_job_circular.php");
                     }
 
-                    if (isset($_GET['view_job_circular'])) {
-                        include("view_job_circular.php");
+                    if (isset($_GET['view_resturant'])) {
+                        include("view_resturant.php");
                     }
 
                     if (isset($_GET['edit_job_circular'])) {
@@ -217,12 +217,12 @@ if (!isset($_SESSION['admin_email'])) {
                     if (isset($_GET['delete_job_circular'])) {
                         include("delete_job_circular.php");
                     }
-                    if (isset($_GET['delete_job_prepration'])) {
-                        include("delete_job_prepration.php");
+                    if (isset($_GET['delete_resturant'])) {
+                        include("delete_resturant.php");
                     }
-                    if (isset($_GET['view_job_prepration'])) {
-                        include("view_job_prepration.php");
-                    }
+                    // if (isset($_GET['view_resturant'])) {
+                    //     include("view_resturant.php");
+                    // }
 
                     if (isset($_GET['view_model_qus'])) {
                         include("view_model_qus.php");
@@ -234,8 +234,8 @@ if (!isset($_SESSION['admin_email'])) {
                         include("view_model_qus_list.php");
                     }
 
-                    if (isset($_GET['edit_job_prepration'])) {
-                        include("edit_job_prepration.php");
+                    if (isset($_GET['edit_resturant'])) {
+                        include("edit_resturant.php");
                     }
                     if (isset($_GET['view_slides'])) {
 
