@@ -82,7 +82,7 @@ if (!isset($_SESSION['admin_email'])) {
                                 </a>
                             </li> -->
 
-
+<!-- 
                             <li class="nav-item has-treeview">
                                 <a href="#" class="nav-link">
                                     <i class="nav-icon fas fa-graduation-cap"></i>
@@ -109,7 +109,7 @@ if (!isset($_SESSION['admin_email'])) {
 
 
                                 </ul>
-                            </li>
+                            </li> -->
 
 
 
@@ -185,7 +185,7 @@ if (!isset($_SESSION['admin_email'])) {
                                     <i class="nav-icon fas fa-users"></i>
 
                                     <p>
-                                        Offer List
+                                        Offer Section 
 
                                     </p>
                                 </a>

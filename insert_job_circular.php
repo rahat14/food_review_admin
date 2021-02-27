@@ -29,7 +29,7 @@ if (!isset($_SESSION['admin_email'])) {
             <li class="active">
 
 
-                <i class="fas fas-dashboard"></i> Dashboard / Insert Job Circular
+                <i class="fas fas-dashboard"></i> Dashboard / Add Offer 
 
             </li>
 
@@ -56,7 +56,7 @@ if (!isset($_SESSION['admin_email'])) {
 
                 <h3>
                     <!-- <i class="fas fa-money fa-fw"></i> -->
-                    Add Job Circular
+                    Add Offer
 
                 </h3>
 
@@ -71,7 +71,7 @@ if (!isset($_SESSION['admin_email'])) {
 
                     <div class="form-group">
 
-                        <label class="col-md-6 control-label">Add Job Circular Title : </label>
+                        <label class="col-md-6 control-label">Offer Title: </label>
 
                         <div class="col-md-12">
 
@@ -85,13 +85,13 @@ if (!isset($_SESSION['admin_email'])) {
                     <div class="form-group">
                         <!-- form-group Starts -->
 
-                        <label class="col-md-3 control-label"> Job Circular Description : </label>
+                        <label class="col-md-3 control-label"> Offer Description : </label>
 
                         <div class="col-md-12">
 
 
 
-                            <textarea name="store_desc" class="form-control" rows="9" cols="20"
+                            <textarea name="store_desc" class="form-control" rows="5" cols="20"
                                 placeholder="Write The Description"></textarea>
 
                         </div>
