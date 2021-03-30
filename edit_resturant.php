@@ -289,7 +289,7 @@ if (!isset($_SESSION['admin_email'])) {
 
                             <div class="col-md-3 ">
 
-                                <input type="submit" name="submit" value="Update Circular" class="btn btn-primary form-control">
+                                <input type="submit" name="submit" value="Update Resturant" class="btn btn-primary form-control">
 
                             </div>
 
