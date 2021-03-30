@@ -11,19 +11,19 @@ if (!isset($_SESSION['admin_email'])) {
 
 <?php
 
-    if (isset($_GET['delete_offer'])) {
+    if (isset($_GET['delete_new_opened'])) {
 
-        $delete_p_cat_id = $_GET['delete_offer'];
+        $delete_p_cat_id = $_GET['delete_new_opened'];
 
-        $delete_p_cat = "delete from offer_db where id='$delete_p_cat_id'";
+        $delete_p_cat = "delete from new_resturant_db where resturant_id='$delete_p_cat_id'";
 
         $run_delete = mysqli_query($con, $delete_p_cat);
 
         if ($run_delete) {
 
-            echo "<script>alert('Offer Has been Deleted')</script>";
+            echo "<script>alert('New Resturant Has been Removed From The List')</script>";
 
-            echo "<script>window.open('index.php?offer_list','_self')</script>";
+            echo "<script>window.open('index.php?new_opened_list','_self')</script>";
         }
     }
 

@@ -185,7 +185,7 @@ if (!isset($_SESSION['admin_email'])) {
                                         <td>
 
 
-                                            <a href="index.php?delete_offer=<?php echo $p_cat_id; ?>">
+                                            <a href="index.php?delete_new_opened=<?php echo $p_cat_id; ?>">
 
                                                 <i class="fa fa-trash-o"></i> Delete
 
