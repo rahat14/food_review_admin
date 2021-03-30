@@ -241,11 +241,11 @@ if (!isset($_SESSION['admin_email'])) {
 
 
                             <li class="nav-item">
-                                <a href="index.php?view_qustion_list" class="nav-link">
+                                <a href="index.php?store_setup" class="nav-link">
                                     <i class="nav-icon fas fa-comment"></i>
 
                                     <p>
-                                        User Qustions
+                                        App Setup 
 
                                     </p>
                                 </a>

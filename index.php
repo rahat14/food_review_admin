@@ -545,10 +545,10 @@ if (!isset($_SESSION['admin_email'])) {
                     //     include("insert_store.php");
                     // }
 
-                    // if (isset($_GET['view_store'])) {
+                    if (isset($_GET['store_setup'])) {
 
-                    //     include("view_store.php");
-                    // }
+                        include("store_setup.php");
+                    }
 
                     if (isset($_GET['delete_store'])) {
 
